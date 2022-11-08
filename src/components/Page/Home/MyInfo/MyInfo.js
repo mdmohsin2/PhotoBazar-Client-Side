@@ -1,14 +1,19 @@
 import React from 'react';
+import './MyInfo.css'
 
 const MyInfo = () => {
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure><img src="https://i.ibb.co/JFG2VWr/slider-bg21.jpg" alt="Album" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">New album is released!</h2>
-                <p>Click the button to listen on Spotiwhy app.</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
+        <div className=''>
+            <div className="mb-20 bg-gray-300 grid grid-cols-1 px-10 md:grid-cols-2 py-32 ">
+                <figure><img className='img-size' src="https://placeimg.com/400/400/arch" alt="Album" />
+                </figure>
+                <div className=" ">
+                    <h2 className="card-title text-4xl mt-10 text-center">Hello! I'm Md Mohsin Ahmed</h2>
+                    <p className='my-8'>
+                        I am a professional photographer by degree, I take pictures of different places, such as sea, beach, river, cropland, and forest, you can see my pictures on my facebook page and youtube channel</p>
+                    <div className="card-actions">
+                        <button className="btn btn-primary">Contact me</button>
+                    </div>
                 </div>
             </div>
         </div>
