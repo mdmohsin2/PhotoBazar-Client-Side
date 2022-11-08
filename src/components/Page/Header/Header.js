@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const menuitems = <>
-        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/' className='mr-5'>Home</Link></li>
+        <li><Link to='/about' className='mr-5'>About Us</Link></li>
+        <li><Link to='/portfolio' className='mr-5'>Portfolio</Link></li>
     </>
     return (
         <div className="navbar bg-base-200">

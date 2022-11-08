@@ -4,7 +4,7 @@ import './MyInfo.css'
 const MyInfo = () => {
     return (
         <div className=''>
-            <div className="mb-20 bg-gray-300 grid grid-cols-1 px-10 md:grid-cols-2 py-32 ">
+            <div className="mb-20 mt-14 bg-gray-300 grid grid-cols-1 px-10 md:grid-cols-2 py-32 ">
                 <figure><img className='img-size' src="https://placeimg.com/400/400/arch" alt="Album" />
                 </figure>
                 <div className=" ">
