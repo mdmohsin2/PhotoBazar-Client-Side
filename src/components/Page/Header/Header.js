@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import './Hrader.css'
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    // handle logOut
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
+
     const menuitems = <>
         <li><Link to='/' className='mr-5'>Home</Link></li>
         <li><Link to='/about' className='mr-5'>About Us</Link></li>
@@ -27,8 +39,20 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className='mr-5'>Login</Link>
-                <Link to='/register' className='mr-5'>Sign Up</Link>
+                {
+                    user?.uid ?
+                        <>
+                            <button onClick={handleLogOut} className='btn-sm bg-info mr-5'>Log out</button>
+                            <p className='text-orange-300'>{user.displayName}</p>
+                        </>
+                        :
+                        <>
+                            <Link to='/login' className='mr-5'>Login</Link>
+                            <Link to='/register' className='mr-5'>Sign Up</Link>
+                        </>
+
+                }
+
             </div>
         </div>
     );

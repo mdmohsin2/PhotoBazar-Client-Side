@@ -1,12 +1,54 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+    const { LoginUser, providerLogin } = useContext(AuthContext);
+
+    const [error, setError] = useState('')
+
+
+    // googleAuth and provider setup area
+    const googleProvider = new GoogleAuthProvider()
+
+    // handleGoogleSignIn setup area
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+
+
+
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.email.value;
+
+        LoginUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(error=>{
+                console.error(error);
+                setError(error.message)
+            })
+
+    }
+
+
     return (
         <div className='bg-base-200 p-20'>
             <div className=' mx-auto w-full max-w-xs bg-gray-300 p-4 shadow-lg rounded-2xl w-96'>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="form-control">
                         <h2 className='text-center text-4xl font-bold pt-4'>Login</h2>
                         <label className="label">
@@ -21,9 +63,10 @@ const Login = () => {
                         <br />
                         <input className='btn btn-primary' type="submit" value="Login" />
                     </div>
+                    <p className='text-red-500'>{error}</p>
                 </form>
-                <p className='text-red-400 py-4'>Or sign in with</p>
-                <button className='btn bg-orange-500 w-full'>
+                <p className='text-red-400 py-4'>Or login in with</p>
+                <button onClick={handleGoogleSignIn} className='btn bg-orange-500 w-full'>
                     <FaGoogle></FaGoogle>
                 </button>
                 <p className='text-center py-5'>New to Junior studio <Link className='font-bold text-orange-500' to='/register'>Sign Up</Link> </p>
