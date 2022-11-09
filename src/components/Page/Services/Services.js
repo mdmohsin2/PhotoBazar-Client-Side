@@ -3,11 +3,12 @@ import ServicesCard from './ServicesCard';
 
 const Services = () => {
     const [services, setServices] = useState([])
+    const [size, setSize] = useState(3)
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch(`http://localhost:5000/services?size=${size}`)
             .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+            .then(data => setServices(data.services))
+    }, [size])
     return (
         <div>
             <div className='text-center mb-8'>
@@ -24,7 +25,9 @@ const Services = () => {
                 }
             </div>
             <div className='text-center my-12'>
-                <button className="btn btn-outline btn-warning">More Services</button>
+               {
+                 <button onClick={()=>setSize(6)} className="btn btn-outline btn-warning">More Services</button>
+               }
             </div>
         </div>
     );
