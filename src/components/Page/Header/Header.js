@@ -21,7 +21,7 @@ const Header = () => {
         <li><Link to='/blog' className='mr-5'>Blog</Link></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

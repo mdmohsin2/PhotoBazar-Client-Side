@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowRight } from "react-icons/fa";
+// import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const ServicesCard = ({ service }) => {
@@ -14,7 +14,8 @@ const ServicesCard = ({ service }) => {
                     <p className='text-2xl font-semibold'>Price: ${price}</p>
                     <Link to={`/checkout/${_id}`}>
                         <button className="">
-                             <FaArrowRight></FaArrowRight>
+                             {/* <FaArrowRight></FaArrowRight> */}
+                             details
                         </button>
                     </Link>
                 </div>
