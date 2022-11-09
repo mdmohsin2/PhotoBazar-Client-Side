@@ -3,6 +3,7 @@ import Home from "../../components/Page/Home/Home";
 import MyInfo from "../../components/Page/Home/MyInfo/MyInfo";
 import Login from "../../components/Page/Login/Login";
 import SignUp from "../../components/Page/Resister/SignUp";
+import Services from "../../components/Page/Services/Services";
 import Blog from "../../components/Shared/Blog/Blog";
 import Error from "../../components/Shared/Error/Error";
 import Portfolio from "../../components/Shared/Portfolio/Portfolio";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/services',
+                element: <Services></Services>
             }
         ]
         
