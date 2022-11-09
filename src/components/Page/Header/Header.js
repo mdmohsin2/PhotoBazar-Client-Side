@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import './Hrader.css'
+import { FaCamera } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -31,7 +32,7 @@ const Header = () => {
                         {menuitems}
                     </ul>
                 </div>
-                <a href='/ ' className="btn btn-ghost normal-case text-xl hidden sm:block ">Photo Bazar</a>
+                <a href='/ ' className="btn btn-ghost normal-case text-xl hidden sm:block "><span className='flex items-center'><FaCamera className='mr-2'></FaCamera> <span>Photo Bazar</span></span></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">

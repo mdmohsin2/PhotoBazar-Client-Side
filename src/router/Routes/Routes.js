@@ -4,6 +4,7 @@ import Home from "../../components/Page/Home/Home";
 import MyInfo from "../../components/Page/Home/MyInfo/MyInfo";
 import Login from "../../components/Page/Login/Login";
 import SignUp from "../../components/Page/Resister/SignUp";
+import Review from "../../components/Page/Review/Review";
 import Services from "../../components/Page/Services/Services";
 import ServicesAll from "../../components/Page/ServicesAll/ServicesAll";
 import Blog from "../../components/Shared/Blog/Blog";
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <CheckOut></CheckOut>,
+                loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+            },
+            {
+                path: '/review/:id',
+                element: <Review></Review>,
                 loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
             }
         ]

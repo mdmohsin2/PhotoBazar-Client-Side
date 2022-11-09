@@ -10,7 +10,7 @@ const SliderItem = ({ slide }) => {
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
                 <h2 className='text-5xl font-bold text-white'>
-                    Junior Studios Photography
+                    Photo Bazar Photography
                 </h2>
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 titles  mt-72">
