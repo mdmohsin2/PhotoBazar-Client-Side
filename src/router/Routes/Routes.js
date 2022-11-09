@@ -4,6 +4,7 @@ import MyInfo from "../../components/Page/Home/MyInfo/MyInfo";
 import Login from "../../components/Page/Login/Login";
 import SignUp from "../../components/Page/Resister/SignUp";
 import Services from "../../components/Page/Services/Services";
+import ServicesAll from "../../components/Page/ServicesAll/ServicesAll";
 import Blog from "../../components/Shared/Blog/Blog";
 import Error from "../../components/Shared/Error/Error";
 import Portfolio from "../../components/Shared/Portfolio/Portfolio";
@@ -25,8 +26,8 @@ const router = createBrowserRouter([
                 element: <MyInfo></MyInfo>
             },
             {
-                path:'portfolio',
-                element:<Portfolio></Portfolio>
+                path: 'portfolio',
+                element: <Portfolio></Portfolio>
             },
             {
                 path: '/blog',
@@ -43,12 +44,16 @@ const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>
+            },
+            {
+                path: '/serviceAll',
+                element: <ServicesAll></ServicesAll>
             }
         ]
-        
+
     },
     {
-        path:'*',
+        path: '*',
         element: <Error></Error>
     }
 ]);

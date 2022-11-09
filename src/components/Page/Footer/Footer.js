@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-neutral text-neutral-content">
             <div className=''>
                 <img className=' mx-auto w-20' src={logo} alt="img" />
-                <p>Junior Studios Ltd.<br />Providing reliable tech since 2022</p>
+                <p>Photo Bazar.com<br />Providing reliable tech since 2022</p>
             </div>
             <div>
                 <span className="footer-title">Social</span>
