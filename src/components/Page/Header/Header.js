@@ -22,7 +22,7 @@ const Header = () => {
         <li><Link to='/blog' className='mr-5'>Blog</Link></li>
     </>
     return (
-        <div className="navbar bg-base-200">
+        <div className="navbar bg-base-200 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const Header = () => {
                     user?.uid ?
                         <>
                             <button onClick={handleLogOut} className='btn-sm bg-info mr-5'>Log out</button>
-                            <p className='text-orange-300'>{user.displayName}</p>
+                            <p className='text-orange-300 hidden sm:block'>{user.displayName}</p>
                         </>
                         :
                         <>

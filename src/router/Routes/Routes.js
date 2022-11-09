@@ -3,6 +3,7 @@ import CheckOut from "../../components/Page/CheckOut/CheckOut";
 import Home from "../../components/Page/Home/Home";
 import MyInfo from "../../components/Page/Home/MyInfo/MyInfo";
 import Login from "../../components/Page/Login/Login";
+import PrivateRouter from "../../components/Page/PrivateRouter/PrivateRouter";
 import SignUp from "../../components/Page/Resister/SignUp";
 import Review from "../../components/Page/Review/Review";
 import Services from "../../components/Page/Services/Services";
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/review/:id',
-                element: <Review></Review>,
+                element: <PrivateRouter><Review></Review></PrivateRouter>,
                 loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
             }
         ]
