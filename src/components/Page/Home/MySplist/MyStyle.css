@@ -4,3 +4,10 @@
     color: #4c86e5 ;
 }
 
+
+
+@media (min-width: 640px) {
+    .py-28{
+        padding-top:-20px;
+    }
+}

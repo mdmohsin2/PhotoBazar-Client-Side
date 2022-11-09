@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -21,6 +22,10 @@ const Login = () => {
                         <input className='btn btn-primary' type="submit" value="Login" />
                     </div>
                 </form>
+                <p className='text-red-400 py-4'>Or sign in with</p>
+                <button className='btn bg-orange-500 w-full'>
+                    <FaGoogle></FaGoogle>
+                </button>
                 <p className='text-center py-5'>New to Junior studio <Link className='font-bold text-orange-500' to='/register'>Sign Up</Link> </p>
             </div>
         </div>

@@ -6,7 +6,7 @@ import './MyStyle.css'
 const MySplist = () => {
     return (
 
-        <div className='py-28 '>
+        <div className='py-16'>
             <h1 className='text-5xl m-5 text-orange-400'>MY SPECIALTIES</h1>
             <div className=" card grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 shadow-md">
                 <div className='border-double border-4 border-indigo-300 hover:border-indigo-600 m-3 '>
