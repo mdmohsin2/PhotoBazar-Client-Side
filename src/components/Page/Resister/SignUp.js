@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../../Hooks/useTitle';
 
 const SignUp = () => {
     const { createUser, providerLogin } = useContext(AuthContext)
+    useTitle('SignUp')
 
     const [error, setError] = useState('')
 
@@ -45,7 +47,7 @@ const SignUp = () => {
 
     return (
         <div className='bg-base-200 p-20'>
-            <div className='bg-gray-300 p-4 shadow-lg rounded-2xl w-96 mx-auto w-full max-w-xs'>
+            <div className='bg-gray-300 p-4 shadow-lg rounded-2xl  mx-auto w-full max-w-xs'>
                 <form onSubmit={handleSignUp}>
                     <div className="form-control ">
                         <h2 className='text-center text-4xl font-bold pt-4'>Sign Up</h2>

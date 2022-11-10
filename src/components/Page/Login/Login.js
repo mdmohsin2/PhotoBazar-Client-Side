@@ -3,10 +3,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useTitle from '../../../Hooks/useTitle';
 
 const Login = () => {
     const { LoginUser, providerLogin } = useContext(AuthContext);
     const [error, setError] = useState('')
+    useTitle('Login')
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -53,7 +55,7 @@ const Login = () => {
 
     return (
         <div className='bg-base-200 p-20'>
-            <div className=' mx-auto w-full max-w-xs bg-gray-300 p-4 shadow-lg rounded-2xl w-96'>
+            <div className=' mx-auto w-full max-w-xs bg-gray-300 p-4 shadow-lg rounded-2xl'>
                 <form onSubmit={handleLogin}>
                     <div className="form-control">
                         <h2 className='text-center text-4xl font-bold pt-4'>Login</h2>

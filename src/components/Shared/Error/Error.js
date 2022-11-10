@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 import './Error.css'
 
 const Error = () => {
+    useTitle('Error')
     return (
         <div className='error'>
             <h2 className='text-5xl text-center py-4 text-white'>Please try again before valid Link <Link to='/' className='text-red-500 underline underline-offset-1'>Home</Link> </h2>

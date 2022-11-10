@@ -1,9 +1,11 @@
 import React from 'react';
 import { GiLoveMystery, GiJewelCrown, GiStairsCake, GiBeachBag } from "react-icons/gi";
+import useTitle from '../../../../Hooks/useTitle';
 import './MyStyle.css'
 
 
 const MySplist = () => {
+    useTitle('Mysplist')
     return (
 
         <div className='py-16'>

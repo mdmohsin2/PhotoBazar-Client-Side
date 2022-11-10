@@ -6,6 +6,7 @@ import { FaCamera } from "react-icons/fa";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
+    
 
     // handle logOut
     const handleLogOut = () => {
@@ -17,12 +18,13 @@ const Header = () => {
 
     const menuitems = <>
         <li><Link to='/' className='mr-5'>Home</Link></li>
+        <li><Link to='/serviceAll' className='mr-5'>Services</Link></li>
         <li><Link to='/about' className='mr-5'>About Us</Link></li>
         <li><Link to='/portfolio' className='mr-5'>Portfolio</Link></li>
         <li><Link to='/blog' className='mr-5'>Blog</Link></li>
     </>
     return (
-        <div className="navbar bg-base-200 ">
+        <div className="navbar pt-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

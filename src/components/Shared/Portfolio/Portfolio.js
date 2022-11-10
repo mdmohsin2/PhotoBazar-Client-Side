@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../../Hooks/useTitle';
 
 const Portfolio = () => {
+    useTitle('Portfolio')
     return (
         <div>
             <h2 className='text-orange-500 text-center text-4xl mt-16'>You can see some of my photos here</h2>

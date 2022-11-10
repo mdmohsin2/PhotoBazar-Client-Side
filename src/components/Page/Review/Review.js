@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const Review = () => {
     const { _id, img, price, title, description } = useLoaderData();
+    useTitle('Review')
     return (
         <div>
             <div className='bg-gray-300 h-xs w-full'>

@@ -11,7 +11,7 @@ const ServicesCard = ({ service }) => {
                 <h2 className="card-title">Name : {title}</h2>
                 <p>{description.slice(0,150)}...</p>
                 <div className="card-actions justify-end flex items-center text-orange-600">
-                    <p className='text-2xl font-semibold'>Price: ${price}</p>
+                    <p className='text-2xl font-semibold'>img-Price: ${price}</p>
                     <Link to={`/checkout/${_id}`}>
                         <button className="btn btn-primary">
                              {/* <FaArrowRight></FaArrowRight> */}

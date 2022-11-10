@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../../Hooks/useTitle';
 
 const Banner = () => {
+    useTitle('Banner')
     return (
         <div className="hero mb-24 rounded-3xl min-h-screen" style={{ backgroundImage: `url("https://i.ibb.co/DtqJ8Tj/444.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>

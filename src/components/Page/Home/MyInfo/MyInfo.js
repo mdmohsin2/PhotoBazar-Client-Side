@@ -1,7 +1,9 @@
 import React from 'react';
+import useTitle from '../../../../Hooks/useTitle';
 import './MyInfo.css'
 
 const MyInfo = () => {
+    useTitle('About-Us')
     return (
         <div className=''>
             <div className="mb-20 mt-14 bg-gray-300 grid grid-cols-1 px-10 md:grid-cols-2 py-32 ">

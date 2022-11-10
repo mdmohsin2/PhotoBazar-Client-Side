@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../../Hooks/useTitle';
 
 const CheckOut = () => {
     const { _id, img, price, title, description } = useLoaderData();
+    useTitle('CheckOut')
     return (
         <div>
             <h2 className='text-orange-500 text-4xl mt-10 text-center'>Details Area</h2>
