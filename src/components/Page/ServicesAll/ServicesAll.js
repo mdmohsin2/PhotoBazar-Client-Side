@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useTitle from '../../../Hooks/useTitle';
 import ServicesCard from '../Services/ServicesCard';
 
@@ -22,6 +23,15 @@ const ServicesAll = () => {
                         key={service._id}
                         service={service}
                     ></ServicesCard>)
+                }
+            </div>
+            <div className='text-center my-12'>
+                {
+                    <button className="btn btn-outline btn-success">
+                        <Link to='/serviceAdd'>
+                            Add New Services
+                        </Link>
+                    </button>
                 }
             </div>
         </div>

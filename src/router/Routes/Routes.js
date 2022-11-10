@@ -6,6 +6,7 @@ import Login from "../../components/Page/Login/Login";
 import PrivateRouter from "../../components/Page/PrivateRouter/PrivateRouter";
 import SignUp from "../../components/Page/Resister/SignUp";
 import Review from "../../components/Page/Review/Review";
+import ServiceAdd from "../../components/Page/ServiceAdd/ServiceAdd";
 import Services from "../../components/Page/Services/Services";
 import ServicesAll from "../../components/Page/ServicesAll/ServicesAll";
 import Blog from "../../components/Shared/Blog/Blog";
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
                 path: '/review/:id',
                 element: <PrivateRouter><Review></Review></PrivateRouter>,
                 loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+            },
+            {
+                path: '/serviceAdd',
+                element: <PrivateRouter><ServiceAdd></ServiceAdd></PrivateRouter>
             }
         ]
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../../../Hooks/useTitle';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const CheckOut = () => {
     const { _id, img, price, title, description } = useLoaderData();
@@ -9,7 +11,11 @@ const CheckOut = () => {
         <div>
             <h2 className='text-orange-500 text-4xl mt-10 text-center'>Details Area</h2>
             <div className="card mx-auto my-16 w-96 bg-base-200 shadow-xl">
-                <figure><img src={img} alt="img" /></figure>
+                <PhotoProvider>
+                    <PhotoView src={img}>
+                        <figure><img className='cursor-pointer' src={img} alt="img" /></figure>
+                    </PhotoView>
+                </PhotoProvider>
                 <div className="card-body">
                     <h2 className="card-title">
                         <h3>Name: {title}</h3>
