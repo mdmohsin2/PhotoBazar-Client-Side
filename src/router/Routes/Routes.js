@@ -9,6 +9,7 @@ import Review from "../../components/Page/Review/Review";
 import ServiceAdd from "../../components/Page/ServiceAdd/ServiceAdd";
 import Services from "../../components/Page/Services/Services";
 import ServicesAll from "../../components/Page/ServicesAll/ServicesAll";
+import Update from "../../components/Page/Update/Update";
 import Blog from "../../components/Shared/Blog/Blog";
 import Error from "../../components/Shared/Error/Error";
 import Portfolio from "../../components/Shared/Portfolio/Portfolio";
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
             {
                 path: '/serviceAdd',
                 element: <PrivateRouter><ServiceAdd></ServiceAdd></PrivateRouter>
+            },
+            {
+                path: '/update/:id',
+                element: <Update></Update>,
+                loader: ({params}) => fetch(`http://localhost:5000/singleReview/${params._id}`)
             }
         ]
 

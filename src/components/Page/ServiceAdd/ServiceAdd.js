@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ServiceAdd.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceAdd = () => {
     const [user, setUser] = useState([])
@@ -8,6 +10,7 @@ const ServiceAdd = () => {
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
+    const notify = () => toast("Review success!");
 
     const handleAddUser = event => {
         event.preventDefault();
@@ -18,7 +21,7 @@ const ServiceAdd = () => {
         const description = form.description.value;
         const price = form.price.value;
 
-        const users = { title, email, img, description,price }
+        const users = { title, email, img, description, price }
         console.log(users);
 
         fetch('http://localhost:5000/user', {
@@ -32,6 +35,9 @@ const ServiceAdd = () => {
             .then(data => {
                 const newUser = [...user, data]
                 setUser(newUser)
+                toast.success('Services add success',{autoClose: 1000})
+                form.reset();
+
             })
             .catch(error => console.error(error))
 
@@ -41,6 +47,7 @@ const ServiceAdd = () => {
 
     return (
         <div id="form-main">
+            <ToastContainer />
             <div id="form-div">
                 <form onSubmit={handleAddUser} class="form" id="form1">
 
