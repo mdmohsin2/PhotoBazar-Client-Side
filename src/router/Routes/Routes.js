@@ -5,6 +5,7 @@ import MyInfo from "../../components/Page/Home/MyInfo/MyInfo";
 import Login from "../../components/Page/Login/Login";
 import PrivateRouter from "../../components/Page/PrivateRouter/PrivateRouter";
 import SignUp from "../../components/Page/Resister/SignUp";
+import AllReview from "../../components/Page/Review/AllReview";
 import Review from "../../components/Page/Review/Review";
 import ServiceAdd from "../../components/Page/ServiceAdd/ServiceAdd";
 import Services from "../../components/Page/Services/Services";
@@ -57,12 +58,12 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <CheckOut></CheckOut>,
-                loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
             },
             {
                 path: '/review/:id',
                 element: <PrivateRouter><Review></Review></PrivateRouter>,
-                loader: ({params}) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
             },
             {
                 path: '/serviceAdd',
@@ -71,7 +72,11 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/singleReview/${params._id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/singleReview/${params.id}`)
+            },
+            {
+                path: '/allReview',
+                element: <AllReview></AllReview>
             }
         ]
 

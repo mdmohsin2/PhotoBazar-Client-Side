@@ -22,6 +22,7 @@ const Header = () => {
         <li><Link to='/about' className='mr-5'>About Us</Link></li>
         <li><Link to='/portfolio' className='mr-5'>Portfolio</Link></li>
         <li><Link to='/blog' className='mr-5'>Blog</Link></li>
+        <li><Link to='/allReview' className='mr-5'>All Reviews</Link></li>
     </>
     return (
         <div className="navbar pt-10">

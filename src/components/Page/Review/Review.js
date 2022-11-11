@@ -8,15 +8,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Review = () => {
-    const { _id, img, price, title, description } = useLoaderData();
+    const { _id, img, price, title } = useLoaderData();
     const { user } = useContext(AuthContext);
     useTitle('Review')
 
-    const [orders, setOrders] = useState([])
+    // const [orders, setOrders] = useState([])
 
 
-    const notify = () => toast("Review success!");
-    
+    // const notify = () => toast("Review success!");
+
 
     const [users, setUsers] = useState([])
     useEffect(() => {
@@ -51,13 +51,13 @@ const Review = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    toast.success('Review Success',{autoClose:1000})
-                    const newReview = [...users,data]
+                    toast.success('Review Success', { autoClose: 1000 })
+                    const newReview = [...users, data]
                     setUsers(newReview)
                     form.reset()
 
                 }
-               
+
 
             })
     }
@@ -78,7 +78,7 @@ const Review = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        toast.success('Delete Success', {autoClose:1000})
+                        toast.success('Delete Success', { autoClose: 1000 })
                         const remaining = users.filter(odr => odr._id !== id);
                         setUsers(remaining)
                     }
@@ -117,12 +117,12 @@ const Review = () => {
                             <span className="label-text text-center text-3xl font-bold">Write Your Opinion Below</span>
                         </label>
 
-                        <input type="email" defaultValue={user?.email} name="email" className='h-12 p-5 my-6 rounded-md mx-auto' placeholder='Email' readOnly />
-                       
+                        <input type="email" defaultValue={user?.email} name="email" className='h-12 w-64 p-5 my-6 rounded-md mx-auto' placeholder='Email' readOnly />
+
 
                         <div className='mx-16'>
                             <textarea className=" textarea textarea-bordered h-32" name='message' placeholder="review here" required></textarea>
-                            <input  className='mb-20 w-full mt-5 btn btn-primary' type="submit" value="Review now" />
+                            <input className='mb-20 w-full mt-5 btn btn-primary' type="submit" value="Review now" />
                         </div>
                     </div>
                 </form>
