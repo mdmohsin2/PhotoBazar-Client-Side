@@ -20,7 +20,7 @@ const Review = () => {
 
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/singleReview?review=${_id}`)
+        fetch(`https://assignmet-11-server.vercel.app/singleReview?review=${_id}`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [_id]);
@@ -40,7 +40,7 @@ const Review = () => {
             imgs
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://assignmet-11-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -68,7 +68,7 @@ const Review = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
-            fetch(`http://localhost:5000/singleReview/${id}`, {
+            fetch(`https://assignmet-11-server.vercel.app/singleReview/${id}`, {
                 method: 'DELETE',
                 // headers: {
                 //     authorization: `Bearer ${localStorage.getItem('genius-token')}`

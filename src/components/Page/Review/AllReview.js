@@ -6,7 +6,7 @@ const AllReview = () => {
     const { user } = useContext(AuthContext)
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review`)
+        fetch(`https://assignmet-11-server.vercel.app/review`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, []);

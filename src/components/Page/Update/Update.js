@@ -13,7 +13,7 @@ const Update = () => {
     const handleUpdateUser = (event) => {
         event.preventDefault();
         // console.log(user);
-        fetch(`http://localhost:5000/singleReview/${user._id}`, {
+        fetch(`https://assignmet-11-server.vercel.app/singleReview/${user._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

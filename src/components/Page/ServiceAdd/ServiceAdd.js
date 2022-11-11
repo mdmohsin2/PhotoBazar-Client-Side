@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const ServiceAdd = () => {
     const [user, setUser] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('https://assignmet-11-server.vercel.app/user')
             .then(res => res.json())
             .then(data => setUser(data))
     }, []);
@@ -24,7 +24,7 @@ const ServiceAdd = () => {
         const users = { title, email, img, description, price }
         console.log(users);
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://assignmet-11-server.vercel.app/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const ServiceAdd = () => {
             .then(data => {
                 const newUser = [...user, data]
                 setUser(newUser)
-                toast.success('Services add success',{autoClose: 1000})
+                toast.success('Services add success', { autoClose: 1000 })
                 form.reset();
 
             })

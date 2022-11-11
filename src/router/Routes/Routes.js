@@ -58,12 +58,12 @@ const router = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 element: <CheckOut></CheckOut>,
-                loader: ({ params }) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignmet-11-server.vercel.app/serviceAll/${params.id}`)
             },
             {
                 path: '/review/:id',
                 element: <PrivateRouter><Review></Review></PrivateRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/serviceAll/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignmet-11-server.vercel.app/serviceAll/${params.id}`)
             },
             {
                 path: '/serviceAdd',
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleReview/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignmet-11-server.vercel.app/singleReview/${params.id}`)
             },
             {
                 path: '/allReview',
