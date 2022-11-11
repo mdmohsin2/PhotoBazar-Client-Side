@@ -3,10 +3,10 @@ import React from 'react';
 const AllreviewTable = ({ u, id }) => {
     const { message } = u
     return (
-        <tr>
+        <tr className='border-2'>
             <th>{id + 1}</th>
-            <td>Cy Ganderton</td>
-            <td>{message}</td>
+            <td></td>
+            <td className='text-violet-600'>{message}</td>
         </tr>
     );
 };

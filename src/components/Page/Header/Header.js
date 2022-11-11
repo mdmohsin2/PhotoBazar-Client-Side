@@ -46,7 +46,7 @@ const Header = () => {
                 {
                     user?.uid ?
                         <>
-                            <button onClick={handleLogOut} className='btn-sm bg-info mr-5'>Log out</button>
+                            <button onClick={handleLogOut} className='btn-sm bg-info'>Log out</button>
                             <p className='text-orange-300 hidden sm:block'>{user.displayName}</p>
                         </>
                         :

@@ -12,17 +12,17 @@ const AllReview = () => {
     }, []);
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mb-14">
                 <h2 className='text-5xl text-orange-400 text-center my-10'>All Review </h2>
-                <table className="table w-full">
+                <table className="table w-full border-4 ">
                     <thead>
                         <tr>
                             <th>serial</th>
-                            <th>img</th>
-                            <th>Review</th>
+                            <th> </th>
+                            <th>Customer Review</th>
                         </tr>
                     </thead>
-                    <tbody className='mt-4'>
+                    <tbody>
                         {
                             users.map((u, idx) => <AllreviewTable key={u._id}
                                 u={u}

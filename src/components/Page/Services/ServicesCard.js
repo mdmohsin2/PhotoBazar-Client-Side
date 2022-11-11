@@ -15,7 +15,7 @@ const ServicesCard = ({ service }) => {
         </button>
     }
     return (
-        <div className=" p-4 mx-auto card card-compact w-96 bg-base-100 shadow-xl">
+        <div className=" p-4 mx-auto card card-compact w-80 bg-base-100 shadow-xl">
             <PhotoProvider>
                 <PhotoView src={img}>
                     <figure><img className='cursor-pointer' src={img} alt="Shoes" /></figure>
