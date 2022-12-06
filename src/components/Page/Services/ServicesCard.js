@@ -23,7 +23,9 @@ const ServicesCard = ({ service }) => {
             </PhotoProvider>
             <div className="card-body">
                 <h2 className="card-title">Name : {title}</h2>
-                <p>{description.length > 100 ? description.slice(0, 150) + '...' : ''}</p>
+
+                <p>{description.length > 100 ? description.slice(0, 150) + '...' : description}</p>
+
                 <div className="card-actions justify-end flex items-center text-orange-600">
                     <p className='text-2xl font-semibold'>img-Price: ${price}</p>
                     <Link to={`/checkout/${_id}`}>
