@@ -49,7 +49,7 @@ const ServiceAdd = () => {
         <div id="form-main">
             <ToastContainer />
             <div id="form-div">
-                <form onSubmit={handleAddUser} class="form" id="form1">
+                <form onSubmit={handleAddUser} className="form" id="form1">
 
                     <p class="name">
                         <input name="name" type="text" className="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
